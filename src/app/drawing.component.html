@@ -1,0 +1,31 @@
+
+<ActionBar title="Your Drawing" class="action-bar"> </ActionBar>
+<ScrollView>
+  <StackLayout>
+      <DrawingPad #DrawingPad 
+      height="450" 
+      id="drawingPad" 
+      penColor="#ff4081" 
+      penWidth="3">
+      </DrawingPad>
+      <StackLayout id = "toolStack" orientation="horizontal">
+          <Button text = "<" (tap)="changeWidth(-1)"></Button>
+          <Button text = ">" (tap)="changeWidth(1)"></Button>
+          <Button text="{{time}}"></Button>
+      </StackLayout>
+      <StackLayout id = "colorStack" orientation="horizontal">
+        <Button class = "colorButton" backgroundColor = "black" (tap)="changeColor('black')"></Button>
+        <Button class = "colorButton" backgroundColor = "purple" (tap)="changeColor('purple')"></Button>
+        <Button class = "colorButton" backgroundColor = "blue" (tap)="changeColor('blue')"></Button>
+        <Button class = "colorButton" backgroundColor = "green" (tap)="changeColor('green')"></Button>
+        <Button class = "colorButton" backgroundColor = "red" (tap)="changeColor('red')"></Button>
+        <Button class = "colorButton" backgroundColor = "orange" (tap)="changeColor('orange')"></Button>
+        <Button class = "colorButton" backgroundColor = "yellow" (tap)="changeColor('yellow')"></Button>
+      </StackLayout>
+      <StackLayout id = "commandStack" orientation="horizontal">
+          <Button class = "commandButton"  text="Submit" (tap)="submit()"></Button>
+          <Button text="Clear" (tap)="clearMyDrawing()"></Button>
+          <Button class = "commandButton" [nsRouterLink]="['/drawing/user']" text="Home"></Button>
+      </StackLayout>
+  </StackLayout>
+</ScrollView>

@@ -1,0 +1,38 @@
+
+Button{
+    margin: 15px 0 0 5%;
+}
+.colorButton{
+    width: 8%;
+    border-radius: 50%;
+    display: inline-block;
+}
+.commandButton{
+   color: black;
+   background-color: darkgray;
+   border-radius: 20px;
+   padding: 15px;
+}
+#colorStack{
+    padding: 10px 0;
+}
+#commandStack{
+    padding: 10px 0;
+}
+#toolStack{
+    color: black;
+}
+DrawingPad{
+    margin-bottom: 20px;
+    background-color: #f7eee3;
+}
+Scrollview{
+    background-color: lightgray;
+}
+ActionBar{
+    background-color: lightgray;
+}
+.small{
+    height: 50px;
+    width: 50px;
+}
